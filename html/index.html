@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+   
+   
+<!-- Google donutchart JS -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">    
+
+google.charts.load('current', { 'packages': ['corechart'] });
+
+google.charts.setOnLoadCallback(drawChart);
+google.charts.setOnLoadCallback(drawChart1);
+google.charts.setOnLoadCallback(drawChart2);
+
+
+function drawChart() {
+
+
+
+var data = google.visualization.arrayToDataTable([
+
+['Effort', 'Amount given'],
+
+['Mozilla Firefox', 50],
+
+['Google Chrome', 10],
+
+['Brave', 40],
+
+
+
+
+]);
+
+
+
+var options = {
+
+pieHole: 0.5,
+
+pieSliceTextStyle: {
+
+color: 'black',
+
+},
+
+legend: 'none'
+
+};
+
+
+
+var chart = new google.visualization.PieChart(document.getElementById('donut_single'));
+
+
+chart.draw(data, options);
+
+}
+
+function drawChart2() {
+
+
+
+var data = google.visualization.arrayToDataTable([
+
+['Effort', 'Amount given'],
+
+['Internet explorer', 35],
+
+['Google Chrome', 10],
+
+['Brave', 10],
+['Brave', 45],
+
+
+
+
+
+]);
+
+
+
+var options = {
+
+pieHole: 0.5,
+
+pieSliceTextStyle: {
+
+color: 'black',
+
+},
+
+legend: 'none'
+
+};
+
+
+var chart = new google.visualization.PieChart(document.getElementById('donut_single0'));
+
+chart.draw(data, options);
+
+}
+function drawChart1() {
+
+
+
+var data = google.visualization.arrayToDataTable([
+
+['Effort', 'Amount given'],
+
+['Internet explorer', 40],
+
+['Google Chrome', 30],
+
+['Brave', 30],
+
+
+
+
+]);
+
+
+
+var options = {
+
+pieHole: 0.5,
+
+pieSliceTextStyle: {
+
+color: 'black',
+
+},
+
+legend: 'none'
+
+};
+
+
+var chart = new google.visualization.PieChart(document.getElementById('donut_single1'));
+
+chart.draw(data, options);
+
+}
+
+</script>
+    
+    <!-- /Google area charts JS -->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2013',  1000,      400],
+          ['2014',  1170,      460],
+          ['2015',  660,       1120],
+          ['2016',  1030,      540]
+        ]);
+
+        var options = {
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <!-- Google line chart JS -->
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+
+        var options = {
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+   
+    <title>LIMITLESS</title>
+</head>
+
+<body>
+
+    <div class="fullcontainer">
+        <header class="header">
+            <div class="logo">
+                <a href="#"><img src="../image/limitlesslogo.png" alt="logo"></a>
+            </div>
+            <div class="headericon1">  
+                <span class="menubar">
+                <span class="fa fa-bars alignicon1"id="alignicon1" onClick="cal()"></span>
+                </span> 
+                <div class="alignicon1" id="positionfornotification">
+                    <span class='fa-regular fa-code-compare fa-flip-horizontal ' ></span>
+                    <div class="notification"><span class="position">9</span> </div>
+                </div>
+                
+                <div class="button ">ONLINE</div>
+
+            </div>
+            <div class="headericon2">
+                <div class="headericon2left">
+                    <img src="../image/images.jpeg" alt="flag">
+                    <select name="language" class="language  ">
+                        <option value="English" >English</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Telugu">Telugu</option>
+                    </select>
+                </div>
+                <div class="commenticonwithnotification " >
+                    <span class="fa fa-comments-o"></span>
+                    <div class="notification1"><span class="position"> 2 </span></div>
+                </div>
+                <div class="headericon2right">
+                    <img src="../image/profile00.jpg" alt="img">
+                    <select name="language" class="language " >
+                        <option value="id">Victoria</option>
+                        <option value="id2">Sign out</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+        <script>
+            function cal()
+            {
+                if(document.getElementsByClassName("leftcontainer")[0].style.display=="block")
+                {
+
+                    document.getElementsByClassName("leftcontainer")[0].style.display="none"
+                }
+                else
+                {
+                    document.getElementsByClassName("leftcontainer")[0].style.display="block"
+
+                }
+                
+             }
+        </script>
+
+        <aside class="leftcontainer">
+            <div class="profile">
+                <div class="profilebox1">
+                    <img src="../image/profile00.jpg" alt="profile img">
+                </div>
+                <div class="profilebox2">
+                    <div style="font-size:1.125rem;font-weight: bold;color: #ecf1ee;"> Victoria Baker</div>
+                    <div class="locationicon">
+                        <span class="fa-solid fa-location-dot" ></span>
+                        <span class="santa">Santa Ana, CA</span>
+                    </div>
+                    
+                </div>
+                <div class="profilebox3">
+                    <span class="fa-regular fa-gear " style="font-size:1.5rem;color:white; "></span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="sidebar1">
+                    <header style="padding-top: 30px;">MAIN</header>
+                        <details>
+                            <summary class="active">
+                                    <span class="fa-regular fa-house-blank" style="font-size:1.25rem;color: white; "></span>
+                                    <span class="bold">Dashboard</span>
+                            </summary>
+                            <summary>
+                                <div class="menubarcontent">Dashboard1</div>
+                            </summary>
+                            <summary>
+                                <div class="menubarcontent">Dashboard2</div>
+                            </summary>
+
+                          
+                        </details>
+                        <details>
+                            <summary>
+                                    <span class="fa-regular fa-layer-group" style="font-size:1.25rm;color: white;"></span>
+                                    <span class="bold">Page layouts</span>
+                                    <span class='fas fa-angle-right' ></span>
+                            </summary>
+                            <summary>
+                                <div class="menubarcontent">Pagelayout1</div>
+                            </summary>
+                            <summary>
+                                <div class="menubarcontent">Pagelayout2</div>
+                            </summary>
+                        </details>
+                        <details>
+                            <summary>
+                                    <span class='fa-regular fa-file' style='font-size:1.25rem; color: white;'></span>
+                                    <span class="bold">Layouts</span>
+                                    <span class='fas fa-angle-right' ></span>
+                            </summary>
+                            <summary>
+                                <div class="menubarcontent">Layout1</div>
+                            </summary>
+                            <summary>
+                                <div class="menubarcontent">Layout2</div>
+                            </summary>
+
+                        </details>
+                        <details>
+                            <summary>
+                                <span class='fa-regular fa-droplet' style='font-size:1.25rem;color: white;'></span>
+                                <span class="bold">Color system </span>
+                                <span class='fas fa-angle-right' ></span>
+                            </summary>
+                            <summary>
+                                <div class="menubarcontent">Color1</div>
+                            </summary>
+                            <summary>
+                                <div class="menubarcontent">Color2</div>
+                            </summary>
+                        </details>
+                        <details>
+                            <summary>
+                                    <span class='fas fa-tint' style='font-size:1.25rem;color: white;'></span>
+                                    <span class="bold">Starter kit</span>
+                                    <span class='fas fa-angle-right'></span>
+                            </summary>
+                            <summary>
+                                <div class="menubarcontent">Kit1</div>
+                            </summary>
+                            <summary>
+                                <div class="menubarcontent">Kit2</div>
+                            </summary>
+
+                        </details>
+                        <details>
+                            <summary>
+                                    <span class="fa-regular fa-list-ul" style="font-size:1.25rem;color: white;"></span>
+                                    <span class="bold">Changelog</span>
+                                    <span class='fas fa-angle-right'></span>
+                            </summary>
+                            <summary>
+                                <div class="menubarcontent">changelog1</div>
+                            </summary>
+                            <summary>
+                                <div class="menubarcontent">changelog2</div>
+                            </summary>
+
+                        </details>
+                </div>
+                <div class="sidebar2">
+                    <header>FORMS</header>
+                    <ul>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class="fa-regular fa-pen " style="font-size:1.5rem; "></span>
+                                    <span class="bold">Form components</span>
+                                    <span class='fas fa-angle-right'></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-regular fa-shoe-prints' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">Wizards</span> 
+                                    <span class='fas fa-angle-right'></span>
+                                </a> 
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fa-regular fa-spell-check' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">Editors</span>
+                                    <span class='fas fa-angle-right'></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fa-regular fa-pen-to-square' style='font-size:1.5rem;'></span>
+                                    <span class="bold">Pickers</span> 
+                                    <span class='fas fa-angle-right'></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-regular fa-keyboard' style='font-size:1.5rem;'></span>
+                                    <span class="bold">Form layouts</span> 
+                                    <span class='fas fa-angle-right'></span>
+                                </a>
+                            </li>
+                        </div>
+
+                    </ul>
+                </div>
+                <div class="sidebar3">
+                    <header>APPEARANCE</header>
+                    <ul>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class="fa-solid fa-grid " style="font-size:1.25rem; "></span>
+                                    <span class="bold">Components</span>
+                                    <span class='fas fa-angle-right'></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-light fa-puzzle-piece' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">content appearance</span> 
+                                    <span class='fas fa-angle-right'></span>
+                                </a> 
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-duotone fa-loader' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">CSS3 animatioins</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-light fa-gift' style='font-size:1.5rem;'></span>
+                                    <span class="bold">Extra components</span> 
+                                    <span class='fas fa-angle-right'></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-regular fa-thumbs-up' style='font-size:1.5rem;'></span>
+                                    <span class="bold">Icons</span> 
+                                    <span class='fas fa-angle-right'></span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="sidebar4">
+                    <header>LAYOUT</header>
+                    <ul>
+                        <div>
+                            <li>
+                                <a href="#"><span class="fa fa-home " style="font-size:1.25rem; "></span>
+                                    <span class="bold">Sidebars</span>
+                                    <span class='fas fa-angle-right'></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fa-solid fa-arrow-down-arrow-up' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">vertical navigation</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a> 
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-solid fa-arrow-right-arrow-left' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">Horizontal navigation</span>
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-regular fa-bars' style='font-size:1.5rem;'></span>
+                                    <span class="bold">Navbars</span> 
+                                    <span class='fas fa-angle-right'></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-regular fa-network-wired' style='font-size:1.25rem;'></span>
+                                    <span class="bold">Menu levels</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="sidebar5">
+                    <header>DATA VISUALIZATION</header>
+                    <ul>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class="fa-solid fa-chart-column " style="font-size:1.25rem; "></span>
+                                    <span class="bold">Echarts library</span>
+                                    <span class='fas fa-angle-right'></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fas fa-layer-group' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">D3 library</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a> 
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fa-regular fa-chart-line' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">Dimple library</span>
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-regular fa-square-poll-vertical' style='font-size:1.5rem;'></span>
+                                    <span class="bold">C3 library</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fa-brands fa-google-plus-g' style='font-size:1.25rem;'></span>
+                                    <span  class="bold">Google visualization</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fa-regular fa-map' style='font-size:1.5rem;'></span>
+                                    <span class="bold">Maps integration</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="sidebar6">
+                    <header>EXTENSIONS</header>
+                    <ul>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class="fa-light fa-draw-circle " style="font-size:1.25rem; "></span>
+                                    <span class="bold">Velacity animations</span>
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fa-regular fa-clock-rotate-left' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">Block UI</span> 
+                                </a> 
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-regular fa-upload' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">File uploaders</span>
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fa-regular fa-calendar-days' style='font-size:1.5rem;'></span>
+                                    <span class="bold">Image cropper</span> 
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fas fa-tint' style='font-size:1.5rem;'></span>
+                                    <span class="bold">Event calendars</span> 
+                                    <span class='fas fa-angle-right' ></span> 
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fa-light fa-globe' style='font-size:1.5rem;'></span>
+                                    <span class="bold">Internationalization</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="sidebar7">
+                    <header>TABLES</header>
+                    <ul>
+                        <div>
+                            <li>
+                                <a href="#"><span class="fa-solid fa-table-cells " style="font-size:1.25rem; "></span>
+                                    <span class="bold">Basic tables</span>
+                                    <span class='fas fa-angle-right'></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-light fa-table-cells' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">Data tables</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                         </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fas fa-file' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">Data table extensions</span>
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fas fa-tint' style='font-size:1.5rem;'></span>
+                                    <span class="bold">Responsive options</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="sidebar8">
+                    <header>PAGE KITS</header>
+                    <ul>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class="fa-solid fa-desktop-arrow-down " style="font-size:1.25rem; "></span>
+                                    <span class="bold">Task manager</span>
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fa-regular fa-money-bills' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">Invoicing</span>
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-solid fa-people-pants' style='font-size:1.5rem;'></span>
+                                    <span class="bold">User pages</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-solid fa-user-plus' style='font-size:1.5rem;'></span>
+                                    <span class="bold">Login & registration</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#"><span class='fa-regular fa-address-card' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">Timelines</span> 
+                                    <span class='fas fa-angle-right'></span>
+                                </a> 
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-solid fa-life-ring' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">Support</span>
+                                    <span class='fas fa-angle-right'  ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-solid fa-magnifying-glass' style='font-size:1.5rem;'></span>
+                                    <span class="bold">Search</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-regular fa-images' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">Gallery</span> 
+                                    <span class='fas fa-angle-right' ></span>
+                                </a> 
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <a href="#">
+                                    <span class='fa-regular fa-triangle-exclamation' style='font-size:1.25rem;'></span> 
+                                    <span class="bold">Error pages</span>
+                                    <span class='fas fa-angle-right' ></span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+        </aside>
+        <section class="rightcontainer">
+            <div class="dashboardbar1">
+                    <div class="subbox1">
+                        <span class="fa-regular fa-arrow-circle-left "></span>
+                        <span class="arrow"><span style="font-weight: bold;font-size:1.563rem;">Home</span>- Dashboard</span>
+                    </div>
+                    <div class="subbox2">
+                        <div class="subbox2_1">
+                                <div class="fa fa-signal icon" style="font-size:1.5rem;color:#5484aa;width:100% ;float:left;"></div>
+                            <div class="align">statistics</div>
+                        </div>
+                        <div class="subbox2_2">
+                                <div class="fa fa-calculator icon" style="font-size:1.5rem;color:#5484aa;width:100% ;float:left;"></div>
+                            <span class="align">invoices</span>
+                        </div>
+                        <div class="subbox2_3">
+                            <div class="fa fa-calendar icon" style="font-size:1.5rem;color:#5484aa;width:100% ;float:left;"></div>
+                            <span class="align">Schedule</span>
+                        </div>
+                    </div>
+            </div>
+            <div class="dashboardbar2">
+                <div class="subbox3">
+                    <span class="fa fa-home " style="font-size:1.25rem;margin-left: 30px;; "></span>
+                    <span >Home</span>
+                    <span>/</span>
+                    <span class="fontcolor2">Dashboard</span>
+                </div>
+                <div class="subbox4">
+                    <div style="float:left;width:50% ">
+                        <span class='fa-solid fa-messages fa-flip-horizontal' ></span>
+                        <span class="support">Support</span>  
+                    </div>
+                    <div style="float:left;width:50% ">
+                        <span class="fa fa-gear gearicon" ></span>
+                        <select name="Setting" class="setting language margin">
+                        <option value="Setting">Settings</option>
+                        <option value="display">Dispaly</option>
+                        <option value="password">Password</option>
+                        <option value="about">About</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="box">
+                <div class="box1">
+                    <div class="box5 main"> 
+                        <div class="box5header">
+                            <span class="trafficdata mainheader">Traffic source</span> 
+                            <span class="liveupdate mainheader">Live update:</span>
+                            <div class="togglebutton">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round" style="height:20px ; width: 40px;"></span>
+                                </label>
+                            </div>
+                        </div>
+                       <div class="box5section">
+                            <div class="section1_1">
+                                <span class="fa-light fa-plus-circle" style="font-size:48px;color:#26a59a;float: left;"></span>
+                                <div  class="newvisitors">
+                                    <div class="font">New visitors</div>
+                                    <span class="fontcolor2" style="font-size:0.938rem; float:left; padding-top: 5px;">2,349avg</span>
+                                </div>
+                             </div>
+                            <div class="section1_2">
+                                <span class='fa-light fa-circle' style='font-size:48px;color:orange;float: left;position: relative;'>
+                                    <span class="fa-regular fa-watch" style="font-size: 30px; color:orange;position: absolute; top: 8px;right: 13px;"></span>
+                                </span>
+                                <div class="newvisitors" >
+                                    <div class="font">New sessions</div> 
+                                    <span class="fontcolor2" style="padding-top: 5px;float: left;font-size: 15px;">08:20 avg</span>
+                                </div>
+                            </div>
+                            <div class="section1_3">
+                                <span class='fa-light fa-circle' id="circle" style="position: relative;">
+                                    <span class='fa-solid fa-people-pants' style='font-size:25px;color: #7282c6;position: absolute;top: 10px;right: 8px;'></span>
+                                </span>
+                                <div class="newvisitors" > 
+                                    <div class="font">Total online</div> 
+                                    <span class="thincircle" style="float: left;margin-top: 7px;"></span>
+                                    <span class="fontcolor2" style="float: left;margin:5px 0 0 5px;">5,378 avg</span>
+                                </div>
+                            </div>
+                            <div id="chart_div" ></div>
+                       </div>  
+                       
+                    </div>
+                    
+                    <div class="box6 main">
+                        <div class="box6header">
+                            <span class="statistics"> Sales statistics</span>
+                            <span class="thincircle" style="float: left;border-color: orange;margin: 6% 0 0 28%;"></span>
+                            <select name="date" class="date ">
+                                <option value="#">June, 15 - June, 21</option>
+                                <option value="#">June, 16 - June, 21</option>
+                                <option value="#">June, 17 - June, 21</option>
+                                <option value="#">June, 18 - June, 21</option>
+                              </select>
+                        </div>
+                        <div class="box6section">
+                            <div class="section2_1">
+                                <div style="width: 100%; float: left;">
+                                    <span class="fa fa-calendar" style="font-size:1.875rem;color:#5484aa;float: left;"></span>
+                                    <div class=ordercount >5,689</div>
+                                </div>
+                                <div class="orderweekly fontcolor2"> orders weekly</div>
+                            </div>
+                            <div class="section2_2">
+                                <div style="float: left;width: 100%;">
+                                    <span class="fas fa-calendar" style="font-size:1.875rem;color:#5484aa;float: left; "></span>
+                                    <div class=ordercount >32,568</div>
+                                </div>
+                                <div class="orderweekly fontcolor2"> orders monthly</div>
+                            </div>
+                            <div class="section2_3">
+                                <div style="float: left;width: 100%;">
+                                    <span class="fa-solid fa-money-bill" style="font-size:1.875rem;color:#5484aa;float: left;"></span>
+                                    <div class=ordercount>$23,464</div>
+                                </div>
+                                <div class="orderweekly fontcolor2"> average revenue</div>
+                            </div>
+                            <div id="curve_chart"></div>
+                            <img id="curvechartimg" src="../image/table2chart.png" alt="">
+                        </div>
+                    </div>    
+                </div>
+                <div class="box2">
+                    <div class="box3">
+                        <div class="box7 main">
+                            <div class="box7header">
+                                <div class="marketcamp mainheader">Margeting campaigns</div>
+                                <div>
+                                    <span class="active1">28 ACTIVE</span>
+                                    <span class="fa fa-bars baricon"></span>
+                                    <span class='fas fa-angle-down arrowicon' ></span>
+                                </div>
+                            </div>
+                            <div class="box7section">
+                                <div class="section3_1">
+                                    <div class="section3_11">
+                                        <div id="donut_single"></div>
+
+                                    </div>
+                                    <div class="section3_12">
+                                        <span class="marketcount" >38,289</span>
+                                        <span class='fas fa-angle-up' style='font-size:0.625rem;color:green;margin: 10px 0 0px 5px; '></span>
+                                        <span style=" color: green;margin: 10px 5px 0 5px;">(+16.2%)</span>
+                                        <div class="time">
+                                            <span class="thincircle" style="float: left;margin-top: 2px;"></span>
+
+                                            <span style="font-size: smaller;color: #ccc;padding-left:10px ;">May 12, 12:30am</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section3_2">
+                                    <div class="section3_21">
+                                        <div id="donut_single0"></div>
+
+                                    </div>
+                                    <div class="section3_22">
+                                        <span class="marketcount" >2,458</span>
+                                        <span class='fas fa-angle-down' style='font-size:0.625rem;color:red;margin: 10px 0 0 5px;'></span>
+                                        <span style=" color: red; margin: 10px 5px 0 5px;">(-4.9%)</span>
+                                        <div class="time">
+                                            <span class="thincircle" style="float: left;margin-top: 2px;"></span>
+
+                                            <span style="font-size: smaller;color: #ccc;padding-left: 10px;">Jun 4, 4:00am</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section3_3">
+                                    <div class="viewreport"><span class="fa-solid fa-arrow-trend-up" style="padding-right:10px ;"></span>View report</div>
+
+                                </div>
+                                
+                            </div>
+                           
+                                
+                        </div>
+                        <div class="table1 main overflow" >
+                                <table>
+                                    <tr>
+                                        <td class="table1header1">
+                                            <span  class="mainheader campaign">Campaign</span>
+                                        </td>
+                                        <td>
+                                            <span class="mainheader client" > Client</span>
+                                        </td>
+                                        <td>
+                                            <span class="mainheader changes"> Changes</span>
+                                        </td>
+                                        <td>
+                                            <span class="mainheader budget">Budget</span>
+                                        </td>
+                                        <td>
+                                            <span class="mainheader status">Status</span>
+                                        </td>
+                                        <td>
+                                            <span class='fas fa-angle-down bar ' ></span> 
+                                        </td>
+                                    </tr>
+                                </table>
+                            <div class="table1header">
+                                <div class="today mainheader "style="width: 100%; border:1px solid lightgray ;margin-top:2px;">Today</div> 
+                             </div>
+                            <table>
+                                <tr >
+                                    <td class="brand">
+                                        <img  src="../image/facebookcircle.png" alt="facebook">
+                                    </td>
+                                    <td>
+                                        <span >Facebook 
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;"></span>
+                            
+                                                <span class="timing">02:00-03:00</span>
+                                            </div>
+                                    </td>
+                                    <td>
+                                        <span class="fontcolor2" >Mintlime</span>            
+                                    </td>
+                                    <td>
+                                        <span class="fa-solid fa-arrow-trend-up" style="float: left;color: green;"></span>
+                                        <span  style="margin:0px 0 0 10px;color: green;">2.34%</span>
+                                    </td>
+                                    <td>
+                                        <span >$5,489</span>
+                                    </td>
+                                    <td>
+                                        <span class="table1button" >ACTIVE</span>
+                                    </td>
+                                    <td>
+                                        <span class="fa fa-bars bar"></span>
+                                    </td> 
+                                </tr>
+                                <tr >
+                                    <td class="brand">
+                                        <img src="../image/youtube-logo-circle.png" alt="youtube">
+                                    </td>
+                                    <td>
+                                        <span >Youtube videos
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;border-color: red;"></span>
+                                                <span class="timing">13:00-14:00</span>
+                                            </div>
+                                    </td>
+                                    <td>
+                                        <span class="fontcolor2">CDsoft</span>
+                                    </td>
+                                    <td>
+                                        <span class="fa-solid fa-arrow-trend-up" style="float: left;color: green;"></span>
+                                        <span style="margin: 0px 0 0 10px;color: green;">3.12%</span>
+                                    </td>
+                                    <td>
+                                        <span >$2,592</span>
+                                    </td>
+                                    <td>
+                                        <span class="table1button closed">CLOSED</span>
+                                    </td>
+                                    <td>
+                                        <span class="fa fa-bars bar"></span>
+                                    </td> 
+                                </tr>
+                                <tr >
+                                    <td class="brand">
+                                        <span class="fa-brands fa-spotify" style="font-size:50px ;color:lightgreen;margin-left:30px;"></span>
+                                    </td>
+                                    <td>
+                                        <span >Spotify ads
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;border-color: red;"></span>
+                                                <span class="timing">10:00-11:00</span>
+                                            </div>
+                                    </td>
+                                    <td>
+                                        <span class="fontcolor2">Diligence</span>
+                                    </td>
+                                    <td>
+                                        <span class="fa-solid fa-arrow-trend-up" style="float: left;color: red;"></span>
+                                        <span style="margin: 0px 0 0 10px;color: red;">-8.02%</span>
+                                    </td>
+                                    <td>
+                                        <span >$1,268</span>
+                                    </td>
+                                    <td>
+                                        <span class="table1button hold">HOLD</span>
+                                    </td>
+                                    <td>
+                                        <span class="fa fa-bars bar"></span>
+                                    </td> 
+                                </tr>
+                                <tr >
+                                    <td class="brand">
+                                        <img src="../image/twittercircle.png" alt="twitter">
+                                    </td>
+                                    <td>
+                                        <span >Twitter ads
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;"></span>
+                                                <span class="timing">04:00-05:00</span>
+                                            </div>
+                                    </td>
+                                    <td>
+                                        <span class="fontcolor2">Deluxe</span>
+                                    </td>
+                                    <td>
+                                        <span class="fa-solid fa-arrow-trend-up" style="float: left;color: green;"></span>
+                                        <span style="margin: 0px 0 0 10px;color: green;">2.78%</span>
+                                    </td>
+                                    <td>
+                                        <span >$7,467</span>
+                                    </td>
+                                    <td>
+                                        <span class="table1button hold ">HOLD</span>
+                                    </td>
+                                    <td>
+                                        <span class="fa fa-bars bar"></span>
+                                    </td> 
+                                </tr>
+                               
+                            </table>
+                            
+
+                        </div>
+                        <div class="table1 main overflow">
+                            <div class="table1header">
+                                <div class="today mainheader"style="width: 100%;">Yesterday</div> 
+                             </div>
+                            <table>
+                                <tr >
+                                    <td class="brand">
+                                        <span class='fab fa-bandcamp' style='font-size:50px;color:orange;float: left;margin-left: 30px;'></span>
+                                    </td>
+                                    <td>
+                                        <span >Bing campaign
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;"></span>
+                                                <span class="timing">15:00-16:00</span>
+                                            </div>
+                                    </td>
+                                    <td>
+                                        <span class="fontcolor2">Matrics</span>            
+                                    </td>
+                                    <td>
+                                        <span class="fa-solid fa-arrow-trend-down" style="float: left;color: red;"></span>
+                                        <span style="margin:0px 0 0 10px ; color: red;">-5.78%</span>
+                                    </td>
+                                    <td>
+                                        <span>$970</span>
+                                    </td>
+                                    <td>
+                                        <span class="table1button" style="background-color:#5fbd63; border: 1px solid #5fbd63 ;">PENDING</span>
+                                    </td>
+                                    <td>
+                                        <span class="fa fa-bars bar"></span>
+                                    </td> 
+
+                                    <!-- Extra content -->
+
+                                    <!-- <td>
+                                        <span class="fa fa-bars bar"></span>
+                                    </td> -->
+                                </tr>
+                                <tr >
+                                    <td class="brand">
+                                        <span class="fa-brands fa-amazon" style="font-size: 50px;float:left;margin-left: 30px;"></span>
+                                    </td>
+                                    <td>
+                                        <span >Amazon ads
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;border-color: red;"></span>
+                                                <span class="timing">18:00-19:00</span>
+                                            </div>
+                                    </td>
+                                    <td>
+                                        <span class="fontcolor2">Blueish</span>
+                                    </td>
+                                    <td>
+                                        <span class="fa-solid fa-arrow-trend-up" style="float: left;color: #4dab4b; "></span>
+                                        <span style="margin: 0px 0 0 10px;color: #4dab4b;">6.79%</span>
+                                    </td>
+                                    <td>
+                                        <span >$1,540</span>
+                                    </td>
+                                    <td>
+                                        <span class="table1button ">ACTIVE</span>
+                                    </td>
+                                    <td>
+                                        <span class="fa fa-bars bar"></span>
+                                    </td> 
+
+                                    <!-- Extra content -->
+
+                                    <!-- <td>
+                                        <span class="fa fa-bars bar"></span>
+                                    </td> -->
+                                </tr>
+                                <tr >
+                                    <td class="brand">
+                                        <span class='fa-brands fa-dribbble' style='font-size:50px;color:#cf5180;border-radius: 30px;margin-left: 30px; float: left;'></span>
+                                    </td>
+                                    <td>
+                                        <span >Dribble ads 
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;border-color: red;"></span>
+                                                <span class="timing">18:00-19:00</span>
+                                            </div>
+                                    </td>
+                                    <td>
+                                        <span class="fontcolor2">Teamable</span>
+                                    </td>
+                                    <td>
+                                        <span class="fa-solid fa-arrow-trend-down" style="float: left;color: red;"></span>
+                                        <span style=" color: red;">9.83%</span>
+                                    </td>
+                                    <td>
+                                        <span >$8,350</span>
+                                    </td>
+                                    <td>
+                                        <span class="table5button closed">CLOSED</span>
+                                    </td>
+                                    <td>
+                                        <span class="fa fa-bars bar"></span>
+                                    </td> 
+                                    
+                                    <!-- Extra content -->
+
+                                    <!-- <td>
+                                        <span class="fa fa-bars bar"></span>
+                                    </td> -->
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="chartbox main chartboxmargin" style="background-color: #26a59a;color: white;">
+                            <div class="item1" >3,450</div>
+                            <span class="elipse">+53,6%</span>
+                            <div class="item2" >Members online</div>
+                            <div class="item3">489 avg</div>
+                            <img src="../image/table7_1.png" alt="" style="margin-bottom: -2px;">
+                        </div>
+                        <div class="chartbox main chartboxmargin1" style="background-color: #ec407a;color: white;">
+                            <div class="item1">49.4%</div>
+                            <span class='fas fa-angle-down angledown' ></span>
+                            <span class="fa-regular fa-gear " id="gearicon" ></span>
+                            <div class="item2">Current server load</div>
+                            <div class="item3">34.9% avg</div>
+                            <img src="../image/table7_2.png" alt=""  style="margin-bottom: -3px;margin-top: 6px;">
+
+                        </div>
+                        <div class="chartbox main chartboxmargin1" style="background-color: #28b6f6;color: white;">
+                            <div class="item1">$18,390</div>
+                            <span class='fas fa-sync' id="fa-sync" ></span>
+                            <div class="item2">Today's revenue</div>
+                            <div class="item3">$37,578</div>
+                            <img src="../image/table7_3.png" alt="" style="margin-bottom: -2px;">
+
+                        </div>
+                        <div class="box10 main" >
+                            <div class="box10header">
+                                <div class="supporttickets mainheader">Support tickets
+                                    <select name="date" class="date" style="margin: 0px 30px 0 0 ;float: right;">
+                                        <option value="#">September 13-October 12</option>
+                                        <option value="#">September 14-October 15</option>
+                                    </select>
+                                    <span class="fa fa-calendar" style="font-size:1.5rem;color:brown;float: right;margin: -5px 20px 0 0;"></span>
+                                </div>
+                            </div>
+                            <div class="box10section" style="overflow: auto;white-space: nowrap;">
+                                <div class="section4_1">
+                                    <div class="section4_11">
+                                        <div id="donut_single1" ></div>
+
+
+                                    </div>
+                                    <div class="section4_12">
+                                        <span style="margin:10px 0 20px 0px ;font-size:1.563rem;font-weight: 550;">14,327</span>
+                                        <span class='fas fa-angle-up' style='font-size:0.625rem;color:green;margin: 10px 0px 0px 5px;'></span>
+                                        <span style="color: green;margin: 10px 0 0 5px;">(+2.9%)</span>
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;"></span>
+                                                <span class="timing fontcolor2 " >Jun 16, 10:00am</span>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="section4_2">
+                                    <div class="section4_21">
+                                            <span class='fa-light fa-circle' style='font-size:48px;color:#6e6ea4;float: left;position: relative;'>
+                                                <span class="fa-regular fa-alarm-plus"style="font-size:25px;color:#6e6ea4 ;position: absolute; top: 10px;right:12px;"></span>
+                                            </span>
+                                        <div class="box10count">1,132
+                                            <div class="fontcolor2 time">total tickets</div>
+                                        </div>
+                                    </div>
+                                    <div class="section4_22">
+                                            <span class='fa-light fa-circle section4circle' style='font-size:48px;color:#6e6ea4;float: left;position: relative;'>
+                                                <span class="fa-regular fa-arrow-rotate-right" style="font-size:1.875rem;color:#6e6ea4 ;position: absolute; top: 9px;right:10px;"></span>
+                                            </span>
+                                        <div class="box10count">06:25:00 
+                                            <div class="fontcolor2 time">response time</div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <div class="box10footer"> 
+                                <span>Due</span>
+                                <span style="margin-left:65px">User</span>
+                                 <span style="margin-left:235px ;">Description</span>
+                            </div>
+                        </div>
+                        <div class="box10 main">
+                            <div class="box10header">
+                                <div class="supporttickets mainheader" style="background-color: #f5f5f5;">Active tickets</div>
+                            </div>
+                            <div class="contenttable">
+                                <table class="line">
+                                    <tr>
+                                        <td class="line1" style="padding-left:20px ;" > 12 
+                                            <div class="fontcolor2">hours</div> 
+                                        </td>
+                                        <td class="circlealign">
+                                            <div class="circle" style="background-color: #6db46b;">
+                                                <span style="position: absolute;top: 12px;right: 19px;font-size:1.25rem;">A</span>
+                                            </div>
+                                        </td>
+                                        <td class="user"> Annabella Doney 
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;border-color: skyblue;"></span>
+                                                <span class="fontcolor2 marginleft11 "> Active</span> 
+                                            </div>
+                                            
+                                        </td>
+                                        <td class="wording">
+                                            <span class="wordingfontsize">[#1183]Workaround for OS X Selects printing bug </span>
+                                            <div class="fontcolor2">Chrome fixed the bug several versions ago,thus rendering</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line1"> 16 
+                                            <div class="fontcolor2" >hours</div> 
+                                        </td>
+                                        <td class="circlealign">
+                                            <img class="image" src="../image/nature3.jpg" alt="">
+                                        </td>
+                                        <td class="user"> 
+                                            Chris Macintyre 
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;border-color: skyblue;"></span>
+                                                <span class="fontcolor2 marginleft1 ">Active</span>
+                                            </div>
+                                            
+                                         </td>
+                                        <td class="wording">
+                                            <span class="wordingfontsize">[#1249]Vertically center carousel controls </span>
+                                            <div class="fontcolor2">Try any carousal control and reduce the screen width below</div> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line1"> 20 
+                                            <div class="fontcolor2">hours</div>
+                                         </td>
+                                        <td class="circlealign">
+                                            <div class="circle" style="background-color: #02a9f5;">
+                                            <span style="position: absolute;top: 12px;right: 19px;font-size:1.25rem;">R</span>
+                                            </div>
+                                        </td>
+                                        <td class="user"> 
+                                            Robert Hauber  
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;border-color: skyblue;"></span>
+
+                                                <span class="fontcolor2 marginleft1 ">Active</span>
+                                            </div>
+                                            
+                                        </td>
+                                        <td class="wording">
+                                            <div class="wordingfontsize">[#1254]Inaccurate small pagination height </span>
+                                            <div class="fontcolor2">The height of pagination elements is not consistent with......</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line1"> 40 
+                                            <div class="fontcolor2">hours</div> 
+                                        </td>
+                                        <td class="circlealign">
+                                            <div class="circle" style="background-color: #f17648;">
+                                            <span style="position: absolute;top: 12px;right: 19px;font-size:1.25rem;">D</span>
+                                            </div>
+
+                                        </td>
+                                        <td class="user"> Dex Sponheim 
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;border-color: skyblue;"></span>
+ 
+                                                <span class="fontcolor2 marginleft1 ">Active</span>
+                                            </div>
+                                         </td>
+                                        <td class="wording">
+                                            <div class="wordingfontsize">[#1184]Round grid column gutter operations </span> 
+                                            <div class="fontcolor2">Left rounds up,right down,should keep everything.</div> 
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="table2 main">
+                            <div class="table2header mainheader">
+                                Resolved tickets
+                            </div>
+                            <div class="table2content">
+                                <table class="line">
+                                    <tr>
+                                        <td class="line2">
+                                             <span class="fa-light fa-check" style="font-size:1.875rem;color:lightgreen;padding: 10px 0;"></span> 
+                                        </td>
+                                        <td class="circlealign2">
+                                            <div class="circle" style="background-color: #6db46b;">
+                                            <span style="position: absolute;top: 12px;right: 19px;font-size:1.25rem;">A</span>
+                                            </div>
+
+                                        </td>
+                                        <td class="user">Alan Macedo
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px"></span>
+
+                                                <span class="fontcolor2 marginleft1">Resolved</span> 
+                                            </div>
+                                        </td>
+                                        <td class="wording1">
+                                            <div class="wordingfontsize">[#1046] Avoid some unnecessary HTML string </span>
+                                            <div class="fontcolor2">Rather than building a string of HTML and then parsing it...</div> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line2"> 
+                                            <span class="fa-light fa-check" style="font-size:1.875rem;color:lightgreen;padding: 10px 0;"></span>
+                                        </td>
+                                        <td class="circlealign2">
+                                            <div class="circle" style="background-color: #ec407a;">
+                                            <span style="position: absolute;top: 12px;right: 19px;font-size:1.25rem;">B</span>
+                                            </div>
+
+                                        </td>
+                                        <td class="user">
+                                            Brett Castellano
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px"></span>
+
+                                                <span class="fontcolor2 marginleft1">Resolved</span>
+                                            </div>
+                                        </td>
+                                        <td class="wording1">
+                                            <div class="wordingfontsize">[#1038] Upatade json configuration </span> 
+                                            <div class="fontcolor2">The 
+                                                <span style="color: #ec407a;">files</span> 
+                                                property is necessary to override the files property</div> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line2" > 
+                                            <span class="fa-light fa-check" style="font-size:1.875rem;color:lightgreen;padding: 10px 0;"></span>
+                                        </td>
+                                        <td class="circlealign2">
+                                            <img class="image" src="../image/profile1.jpeg" alt="">
+                                        </td>
+                                        <td class="user">Roxanne Forbes 
+                                            <div class="time"> 
+                                                <span class="thincircle" style="float: left;margin-top: 2px"></span>
+
+                                                <span class="fontcolor2 marginleft1">Resolved</span>
+                                            </div>
+                                        </td>
+                                        <td class="wording1">
+                                            <div class="wordingfontsize">[#1034] Tooltip multiple event  </span>
+                                            <div class="fontcolor2">Fix behaviour when tooltips and popovers that are.....</div> 
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="box10 main" style="margin-bottom:30px ;">
+                            <div class="table2header mainheader">
+                                Closed tickets
+                            </div>
+                            <div class="box10content" style="overflow: auto;white-space: nowrap; ">
+                                <table class="line">
+                                    <tr>
+                                        <td class="line2"> 
+                                            <span class="fa-light fa-close" style="font-size:1.875rem;color:red;padding: 10px 0"></span>
+                                        </td>
+                                        <td class="circlealign2">
+                                            <img class="image" src="../image/profile5.jpeg" alt="">
+                                        </td>
+                                        <td class="user">Mitchell Sitkin
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;border-color: red;"></span>
+
+                                                <span class="fontcolor2 marginleft1">closed</span> 
+                                            </div>
+                                            
+                                        </td>
+                                        <td class="wording2" >
+                                            <div class="wordingfontsize">[#1040] Account for static form controls in form group  </span>
+                                            <div class="fontcolor2">Resizes contrrol label's font-sixze and account for the stand</div>
+                                        </td>
+                                        <!-- Extra content -->
+                                        <td class="wording2" >
+                                            <div class="wordingfontsize">[#1040] Account for static form controls in form group  </span>
+                                            <div class="fontcolor2">Resizes contrrol label's font-sixze and account for the stand</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line2"> 
+                                            <span class="fa-light fa-close" style="font-size:1.875rem;color:red;padding: 10px 0"></span>
+                                        </td>
+                                        <td class="circlealign2">
+                                            <div class="circle" style="background-color: #8e7265;">
+                                            <span style="position: absolute;top: 12px;right: 19px;font-size:1.25rem;">K</span>
+                                            </div>
+
+                                        </td>
+                                        <td class="user">
+                                            Katleen Jensen
+                                            <div class="time">
+                                                <span class="thincircle" style="float: left;margin-top: 2px;border-color: red;"></span>
+
+                                                <span class="fontcolor2 marginleft11">closed</span>
+                                            </td>
+                                            </div>
+                                            
+                                        <td class="wording2">
+                                            <div class="wordingfontsize">[#1038] Proper sizing of form control feedback </span>  
+                                            <div class="fontcolor2">Feedback icon sizing inside a larger/smaller form-group.....</div> 
+                                        </td>
+                                        <!-- Extra content -->
+                                        <td class="wording2">
+                                            <div class="wordingfontsize">[#1038] Proper sizing of form control feedback </span>  
+                                            <div class="fontcolor2">Feedback icon sizing inside a larger/smaller form-group.....</div> 
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="box11 main">
+                            <div class="box11header mainheader">
+                                Lastest posts
+                                    <span class="fa fa-close box11headericon" ></span>
+                                    <span class='fas fa-sync box11headericon'></span>
+                                    <span class='fas fa-angle-down box11headericon'></span>
+                            </div>
+                            <div class="box11content">
+                                <div class="box11box1">
+                                        <img src="../image/image1.png" alt="">
+                                        <div class="box11wording1" >
+                                            <div class="fontcolor linegap"style="margin-top:10px;" >Up unpacked friendly</div>
+                                            <div class="fontcolor2 linegap">
+                                                <span class="fa fa-play" style="font-size:13px;color:#ccc"></span>
+                                                <span class="linegap2">Video tutorials</span> 
+                                            </div>
+                                            <span class="fontcolor2 linegap ">14 minutes ago</span>
+                                                <span class="linegap gap"> 
+                                                    <div class="linegap2">The him father parish </div> 
+                                                    <div>looked has sooner.</div> 
+                                                    <div> Attachement frequently</div> 
+                                                    <div>gay terminated son...</div> 
+                                                </span>
+                                         </div>
+                                </div>
+                                <div class="box11box2">
+                                    <img src="../image/image3.png" alt="">
+                                    <div class="box11wording3" >
+                                        <span class="fontcolor linegap" >Case read they must</span> 
+                                        <div class="fontcolor2 linegap">
+                                            <span class="fa fa-play" style="font-size:13px;color:#ccc"></span>
+                                            <span style="line-height:35px ;">Video tutorials</span> 
+                                        </div>
+                                        <span class="fontcolor2 linegap">20 hours ago</span>
+                                        <span class="linegap gap">
+                                            <div class="linegap2">On it differed repeated </div> 
+                                            <div>wandered required in.</div>  
+                                            <div>Then girl neat hy yet</div> 
+                                            <div>knew rose spot...</div> 
+                                        </span> 
+                                    </div>
+                                </div>
+                                <div class="box11box3">
+                                    <img class="image2" src="../image/image2.png" alt="">
+                                        <div class="box11wording2" >
+                                            <div class="fontcolor linegap" >
+                                                <div>it allowance</div>  
+                                                 <div>prevalied</div> 
+                                            </div>
+                                                 <div class="fontcolor2 linegap">
+                                                    <span class="fa fa-play" style="font-size:13px;color:#ccc"></span>
+                                                    <span class="linegap2">Video tutorials</span>  
+                                                 </div>
+                                            <span class="fontcolor2 linegap">
+                                                <div>12day ago</div> 
+                                            </span>
+                                            <span class="linegap gap">
+                                                <div class="linegap2">Alteration literature to</div> 
+                                                <div>or an sympathize mr</div>  
+                                                <div>imprudence.Of is </div> 
+                                                <div>ferrars subject as </div> 
+                                                <div>enjoyed...</div> 
+                                                </span>
+                                         </div>   
+                                </div>
+                                <div class="box11box4">
+                                        <img class="image4" src="../image/image4.png" alt="" >
+                                        <div class="box11wording2" >
+                                            <span class="fontcolor linegap" >Too carriage 
+                                                <div>attended</div> 
+                                            </span> 
+                                            <div class="fontcolor2 linegap">
+                                                <span class="fa fa-play" style="font-size:13px;color:#ccc"></span>
+                                                <span class="linegap2">FAQ section</span> 
+                                            </div>
+                                            <div class="fontcolor2 linegap"> 
+                                                 2 days ago
+                                            </div>
+                                            <span class="linegap">
+                                                <div class="linegap2">Marianne or husbands</div> 
+                                                <div>if at stronger ye. </div> 
+                                                <div>Considered is as</div>  
+                                                <div>middletons </div> 
+                                                 <div>uncommonly....</div> 
+                                                </span>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box4">
+                        <div class="box8 main box8margin" >
+                            <span class='fas fa-angle-down ' style='font-size:0.938rem; float: right;margin:40px 20px 0 0; color:#9ba4a9;'></span>
+                            <span class="fa-regular fa-gear " style="font-size:1.25rem;color:#9ba4a9;float: right; margin:40px 5px 0 0;"></span>
+                            <div class="box8content">
+                                <div class="box8contentA" >
+                                    <div class="progressbar">
+                                        <div class="basecircle" >
+                                            <div class="quadrant"></div>
+                                        </div>
+                                        <div class="circle1"></div>
+                                        <span class="fa-regular fa-watch-smart" style="color:#f74385 ;font-size:48px;position: absolute;"></span>
+    
+                                    </div>
+                                </div>
+                                <div class="box8contentB">
+                                    <div class="content1">68%</div>
+                                    <div class="content2">Hours available</div>
+                                    <div class="content3 fontcolor2">64% average</div>
+                                    <img src="../image/graph1.png" alt="" >
+                                    </div>
+                                
+                            </div>
+                        </div>
+                        <div class="box8 main box8margin1" >
+                            <span class='fas fa-angle-down ' style='font-size:0.938rem; float: right;margin:40px 20px 0 0; color: #9ba4a9 '></span>
+                            <span class="fa-regular fa-gear " style="font-size:1.25rem;color:#9ba4a9;float:right; margin:40px 5px 0 0; "></span>
+                            <div class="box8content">
+                                <div class="box8contentA">
+                                    <div class="progressbar">
+                                        <div class="basecircle" style="background-color: #5d63b4;">
+                                            <div class="quadrant"></div>
+                                        </div>
+                                        <div class="circle1"></div>
+                                        <span class="fa-solid fa-trophy-star" style="color:#6065b6 ;font-size:45px;position: absolute;"></span>
+    
+                                    </div>
+                                </div>
+                                <div class="box8contentB">
+                                    <div class="content1">82%</div>
+                                    <div class="content2">Productivity goal</div>
+                                    <div class="content3 fontcolor2">87% average</div>
+                                    <img src="../image/graph2.png" alt="" >
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="box9 main" >
+                            <div class="box9header mainheader">
+                                Daily sales status
+                                <span class="mainheader" id="balance" >Balance: <span style="color: red ;">$4,378</span> </span>
+                                <span class='fas fa-angle-down 'id="angledown" ></span>
+                                <span class="fa-regular fa-gear " style="font-size:1.25rem;color:#9ba4a9; float: right; margin-right:5px;"></span>
+                            </div>
+                            <div class="box9section">
+                                <div class="secleft"style="margin :40px 0 0 30px">Alpha app</div> 
+                                <span class="secright"style="margin :40px 30px 0 0">445 sales today</span>
+                                <div class="statusbar"> 
+                                    <span class="rec" style="background-color:#80b33f;"></span>
+                                    <span class="rec" style="background-color:#a3c56a ;"></span>
+                                    <span class="rec" style="background-color:#79b24a;"></span>
+                                    <span class="rec" style="background-color:#86a855;"></span>
+                                    <span class="rec" style="background-color:#7bb33f;"></span>
+                                    <span class="rec" style="background-color:#5f7d3f;"></span>
+                                    <span class="rec" style="background-color:#5f7d3f;"></span>
+                                    <span class="rec" style="background-color:#95cc65;"></span>
+                                    <span class="rec" style="background-color:#80b34a;"></span>
+                                    <span class="rec" style="background-color:#96d05f ;"></span>
+                                    <span class="rec" style="background-color:#79b53e;"></span>
+                                    <span class="rec" style="background-color:#84ae49;"></span>
+                                    <span class="rec" style="background-color:#87b041;"></span>
+                                    <span class="rec" style="background-color:#81b241;"></span>
+                                    <span class="rec" style="background-color:#7ab43c;"></span>
+                                    <span class="rec" style="background-color:#a1c869 ;"></span>
+                                    <span class="rec" style="background-color:#83aa54 ;"></span>
+                                    <span class="rec" style="background-color:#84ba47;"></span>
+                                    <span class="rec" style="background-color:#558a2f;"></span>
+                                    <span class="rec" style="background-color:#99cd5e;"></span>
+                                    <span class="rec" style="background-color:#96cd65;"></span>
+                                    <span class="rec" style="background-color:#86b244;"></span>
+                                    <span class="rec" style="background-color:#9acc6a;"></span>
+                                    <span class="rec" style="background-color:#5f7d3f;"></span>
+                                    <span class="rec" style="background-color:#83b55b;"></span>
+                                    <span class="rec" style="background-color:#9bca67;"></span>
+                                    <span class="rec" style="background-color:#99cc68;"></span>
+                                    <span class="rec" style="background-color:#7fb23d;"></span>
+                                </div>
+                                <div class="secleft">Omega app </div>
+                                <span class="secright">422 sales today</span> 
+                                <div class="statusbar"> 
+                                    <span class="rec" style="background-color:#7aab3d;"></span>
+                                    <span class="rec" style="background-color:#96d05f ;"></span>
+                                    <span class="rec" style="background-color:#5f7d3f ;"></span>
+                                    <span class="rec" style="background-color:#81b241 ;"></span>
+                                    <span class="rec" style="background-color:#84ba47 ;"></span>
+                                    <span class="rec" style="background-color:#99cc68 ;"></span>
+                                    <span class="rec" style="background-color:#7fb23d ;"></span>
+                                    <span class="rec" style="background-color:#9bca67;"></span>
+                                    <span class="rec" style="background-color:#83b55b ;"></span>
+                                    <span class="rec" style="background-color:#9acc6a;"></span>
+                                    <span class="rec" style="background-color:#558a2f;"></span>
+                                    <span class="rec" style="background-color:#9acc6a ;"></span>
+                                    <span class="rec" style="background-color:#9bca67 ;"></span>
+                                    <span class="rec" style="background-color:#538e2e ;"></span>
+                                    <span class="rec" style="background-color:#86a855 ;"></span>
+                                    <span class="rec" style="background-color:#7ab43c ;"></span>
+                                    <span class="rec" style="background-color:#84ba47 ;"></span>
+                                    <span class="rec" style="background-color:#99cd5e;"></span>
+                                    <span class="rec" style="background-color:#84ae49 ;"></span>
+                                    <span class="rec" style="background-color:#9bca67 ;"></span>
+                                    <span class="rec" style="background-color:#588831;"></span>
+                                    <span class="rec" style="background-color:#9cc76a;"></span>
+                                    <span class="rec" style="background-color:#588831;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#588831;"></span>
+                                    <span class="rec" style="background-color:#588831 ;"></span>
+                                    <span class="rec" style="background-color:#9cc76a;"></span>
+                                    <span class="rec" style="background-color:#a0c86c;"></span>
+                                </div>
+                                <div class="secleft">Delta app</div> 
+                                <span class="secright">403 sales today</span>
+                                <div class="statusbar"> 
+                                    <span class="rec" style="background-color:#80b33f;"></span>
+                                    <span class="rec" style="background-color:#5b7f3b ;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#80b750;"></span>
+                                    <span class="rec" style="background-color:#7ca855;"></span>
+                                    <span class="rec" style="background-color:#80b750;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#7ca855;"></span>
+                                    <span class="rec" style="background-color:#80b750;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#80b750;"></span>
+                                    <span class="rec" style="background-color:#5b7f3b ;"></span>
+                                    <span class="rec" style="background-color:#7ca855 ;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#80b750;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#7ca855;"></span>
+                                    <span class="rec" style="background-color:#80b750;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#5b7f3b ;"></span>
+                                    <span class="rec" style="background-color:#7ca855;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#80b750 ;"></span>
+                                    <span class="rec" style="background-color:#7ca855;"></span>
+                                    <span class="rec" style="background-color:#5b7f3b ;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#80b750 ;"></span>
+                                    <span class="rec" style="background-color:#5b7f3b ;"></span>
+                                </div>
+                                <div class="secleft"> Sigma app</div> 
+                                <span class="secright">445 sales today</span>
+                                <div class="statusbar"> 
+                                    <span class="rec" style="background-color:#80b33f;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#7caf49;"></span>
+                                    <span class="rec" style="background-color:#7ca855 ;"></span>
+                                    <span class="rec" style="background-color:#76b038;"></span>
+                                    <span class="rec" style="background-color:#5b7f3b ;"></span>
+                                    <span class="rec" style="background-color:#7caf49 ;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#4f8c2d;"></span>
+                                    <span class="rec" style="background-color:#7ca855;"></span>
+                                    <span class="rec" style="background-color:#7caf49;"></span>
+                                    <span class="rec" style="background-color:#5b7f3b;"></span>
+                                    <span class="rec" style="background-color:#7ca855;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#76b038 ;"></span>
+                                    <span class="rec" style="background-color:#5b7f3b ;"></span>
+                                    <span class="rec" style="background-color:#7ca855;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#76b038 ;"></span>
+                                    <span class="rec" style="background-color:#5b7f3b;"></span>
+                                    <span class="rec" style="background-color:#7ca855;"></span>
+                                    <span class="rec" style="background-color:#9cc76a;"></span>
+                                    <span class="rec" style="background-color:#7ca855;"></span>
+                                    <span class="rec" style="background-color:#5b7f3b;"></span>
+                                    <span class="rec" style="background-color:#7ca855;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                    <span class="rec" style="background-color:#7ca855;"></span>
+                                    <span class="rec" style="background-color:#9cc76a ;"></span>
+                                </div>
+                                <span class="number" > 4 </span>
+                                <div class="statusbar2" > 
+                                    <span class="rec1" style="background-color:#e1e8da;"></span>
+                                    <span class="rec1" style="background-color:#c9d9b4;"></span>
+                                    <span class="rec1" style="background-color:#a5c180;"></span>
+                                    <span class="rec1" style="background-color:#88ab58;"></span>
+                                    <span class="rec1" style="background-color:#5d8536 ;"></span>
+                                </div> 
+                                <span style="margin:30px 0px 25px 0 ;float:left">43</span>
+                            </div>
+                        </div>
+                        <div class="box9 main" style="margin-top: -30px;">
+                            <div class="box9header2">
+                                <span class="application mainheader"> Application</span>
+                                <span class="applicationtime mainheader">Time</span>
+                            </div>
+                            <div class="box9section" >
+                                <table >
+                                    <tr >
+                                        <td class="line3">
+                                            <div class="circle">
+                                            <span style="position: absolute;top: 12px;right: 19px;font-size:1.25rem;">S</span>
+
+                                            </div>
+                                        </td>
+                                        <td >
+                                            <span class="fontcolor">Sigma application</span> 
+                                            <div class="time">
+                                                <span class="fa fa-check" style="font-size:0.625rem;color:#ccc"></span> 
+                                                <span class="fontcolor2 timing ">New order</span>
+                                            </div>  
+                                        </td>
+                                        <td class="fontcolor2">06:28 pm</td>
+                                    </tr>
+                                    <tr >
+                                        <td class="line3">
+                                            <div class="circle" style="background-color: #ee524b;">
+                                            <span style="position: absolute;top: 12px;right: 19px;font-size:1.25rem;">A</span>
+
+                                            </div>
+                                        </td>
+                                        <td > 
+                                            <span class="fontcolor">Alpha application</span>
+                                            <div class="time">
+                                                <span class='fas fa-redo' style='font-size:0.625rem;color:#ccc'></span> 
+                                                <span class="fontcolor2 timing ">Renewal</span>
+                                            </div>
+                                        </td>
+                                        <td class="fontcolor2 ">04:52 pm</td>
+                                    </tr>
+                                    <tr >
+                                        <td class="line3">
+                                            <div class="circle" style="background-color: #5f6ab6 ;">
+                                            <span style="position: absolute;top: 12px;right: 19px;font-size:1.25rem;">D</span>
+                                                
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <span class="fontcolor">Delta application</span> 
+                                            <div class="time"> 
+                                                <span class="fa-light fa-life-ring" style="font-size:0.625rem;color:#ccc"></span>  
+                                                <span class="fontcolor2 timing ">Support</span> 
+                                            </div>
+                                        </td>
+                                        <td class="fontcolor2">01:26 pm</td>
+                                    </tr>
+                                    <tr >
+                                        <td class="line3">
+                                            <div class="circle" style="background-color: #6db46b;">
+                                            <span style="position: absolute;top: 12px;right: 19px;font-size:1.25rem;">O</span>
+                                                
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <span class="fontcolor">Omega application</span> 
+                                            <div class="time">
+                                            <span class="fa-light fa-life-ring" style="font-size:0.625rem;color:#ccc"></span> 
+                                            <span class="fontcolor2 timing">Support</span> 
+                                            </div>
+                                        </td>
+                                        <td class="fontcolor2">11:46 pm</td>
+                                    </tr>
+                                    <tr >
+                                        <td class="line3">
+                                            <div class="circle" style="background-color: #ee524b;">
+                                            <span style="position: absolute;top: 12px;right: 19px;font-size:1.25rem;">A</span>
+                                            </div>
+                                        </td>
+                                        <td> 
+                                            <span class="fontcolor">Alpha application</span> 
+                                            <div class="time">
+                                                <span class='fas fa-redo' style='font-size:0.625rem;color:#ccc'></span> 
+                                                <span class="fontcolor2 timing">Renewal</span>
+                                            </div>
+                                        </td>
+                                        <td class="fontcolor2">10:29 pm</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="box9 main box9margin" >
+                            <div class="box9header mainheader">
+                                <span style="font-size: large;float: left;">My message</span> 
+                                <span class='fas fa-history'></span>
+                                <span style="margin-left:15px ;font-size: large;" >Jul 7, 10:30</span> 
+                                <span  class="button onlinebutton">ONLINE</span>
+                            </div>   
+
+                            <div class="box9section2">
+                                <div class="box9section2_1">
+                                    <div style="width:100% ;float: left;">
+                                        <span class="fa-regular fa-clipboard-list box9sectionicon" style="margin: 35px 0 0 30px;"></span>
+                                        <span class="numbers" >2,345</span>
+                                    </div>
+                                    <div class="thisweek fontcolor2">this week</div>
+                                </div>
+                                <div class="box9section2_2">
+                                    <div style="width:100% ;float: left;">
+                                        <span class="fa-regular fa-calendar-days box9sectionicon" ></span>
+                                        <span class="numbers" >3,568</span>
+                                    </div>
+                                    <div class="thismonth fontcolor2">this month</div>
+                                </div>
+                                <div class="box9section2_3">
+                                    <div style="width:100% ;float: left;">
+                                        <span class="fa-regular fa-message-lines box9sectionicon" ></span>
+                                        <span class="numbers" >32,693</span>
+                                    </div>
+                                    <span class="thismonth fontcolor2">all message</span>
+                                </div>
+                                <img src="../image/wave.png" alt="" style="width:100% ;margin-top:40px;float: left;">
+                            </div>        
+                            <div class="box9footer">
+                                <span class="tuesday mainheader" style="padding-left:40px">TUESDAY</span>
+                                <span class="monday mainheader">MONDAY</span>
+                                <span class="friday mainheader">FRIDAY</span>
+                            </div>
+                        </div>
+                        <div class="box9 main" style="margin-top:-30px ;">
+                            <div class="box9section">
+                                <table  style="border: none ;" >
+                                    <tr  style="border: none ;" >
+                                        <td class="line2">
+                                            <div class="notification2"><span class="position">8</span> </div>
+                                            <img class="image" src="../image/profile.jpeg" alt="">
+                                        </td>
+                                        <td class="padding1">
+                                            <span class="fontcolor">James Alexander</span> 
+                                            <div>
+                                                <span class="fontcolor2">the constitutionallyinventoried 
+                                                    <div>precaariously...</div> 
+                                                </span> 
+                                            </div>
+                                    </td>
+                                        <td class="fontcolor2" style="padding-bottom: 30px;">14:58</td>
+                                    </tr>
+                                    <tr  style="border: none ;">
+                                        <td class="line2">
+                                            <div class="notification2"><span class="position">6</span> </div>
+                                            <img class="image" src="../image/profile1.jpeg" alt="" >
+                                        </td>
+                                        <td class="padding1"> 
+                                            <span class="fontcolor">Margo Baker</span> 
+                                            <div>
+                                                <span class="fontcolor2">Pinched a well more moral chose 
+                                                    <div>goodness...</div> 
+                                                </span>
+                                            </div> 
+                                        </td>
+                                        <td class="fontcolor2 " style="padding-bottom: 30px;">12:16</td>
+                                    </tr>
+                                    <tr  style="border: none ;">
+                                        <td class="line2">
+                                            <img class="image" src="../image/profile2.jpeg" alt="" >
+                                        </td>
+                                        <td class="padding1"> 
+                                            <span class="fontcolor">Jeremy Victorino</span>  
+                                            <div>
+                                                <span class="fontcolor2">Pert thickly mischievous clung 
+                                                    <div>frowned well...</div> 
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="fontcolor2" style="padding-bottom: 30px;">09.48</td>
+                                    </tr>
+                                    <tr  style="border: none ;" >
+                                        <td class="line2">
+                                            <img class="image" src="../image/profile3.jpeg" alt="">
+                                        </td>
+                                        <td class="padding1"> 
+                                            <span class="fontcolor">Beatrix Diaz</span> 
+                                            <div>
+                                                <span class="fontcolor2">Nightingale taped hello bucolic 
+                                                    <div>fussily cardinal</div> 
+                                                </span> 
+                                            </div> 
+                                            
+                                        </td>
+                                        <td class="fontcolor2" style="padding:0  25px 30px 0;">05.54</td>
+                                    </tr>
+                                    <tr style="border: none ;" >
+                                        <td class="line2">
+                                            <img class="image" src="../image/profile4.jpeg" alt="">
+                                        </td>
+                                        <td class="padding1"> 
+                                            <span class="fontcolor">Richard Vango</span>
+                                            <div>
+                                                <span class="fontcolor2">Amidst roadrunner distantly 
+                                                    <div>pompously where...</div> 
+                                                </span> 
+                                            </div>
+                                            
+                                        </td>
+                                        <td class="fontcolor2" style="padding-bottom: 30px;">01.43</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="box9 main box9margin">
+                            <div class="box9header mainheader">
+                                <span style="float: left;"> Daily Financials</span>
+                                <span class="mainheader realtime" >Realtime </span>
+                                <span class="togglebutton">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider1 round slider"></span>
+                                    </label>
+                                </span>
+                               
+                                <span class="elipse1">+86</span>
+                            </div>
+                            <div class="box9section">
+                                <div class="secleft" style="margin:40px 0 0 30px ;">Revenue</div> <span class="secright fontcolor2"style="margin :40px 30px 0 0">USD,in thousands</span>
+                                <div class="statusbar1"> <img src="../image/revenuebar.png" alt="" style="width: 93%;margin:3% 2% 0 5%"></div>
+                                <div class="secleft">Profit </div><span class="secright fontcolor2">in percents</span> 
+                                <div class="statusbar1"> <img src="../image/profitbar.png" alt="" ></div>
+                                <div class="secleft">Order Size</div> <span class="secright fontcolor2">Average value</span>
+                                <div class="statusbar1"> <img src="../image/ordersizebar.png" alt="" style="margin-bottom:30px ;"></div>
+                               
+                            </div>
+                            <div class="box9content2">
+                                <table style="border: none;">
+                                    <tr style="border: none ;">
+                                        <td class="line2">
+                                            <span class='fa-light fa-circle' style='font-size:48px;color:#d92662;padding-bottom:25px ;'>
+                                                <span class="fa-solid fa-arrow-trend-up" style="font-size:25px; color:#d92662;position: relative;top: -10px;right: 50px;"></span>
+                                            </span>
+                                            
+
+                                        </td>
+                                        <td >
+                                            <span > Stats for July,6:1938 orders,
+                                               <div>$4220 revenue</div> 
+                                            </span> 
+                                            <span class="fontcolor2">
+                                                2 hours ago
+                                            </span> 
+                                        </td>
+                                        <td ><span class='fas fa-angle-right rightarrow' ></span></td>
+                                    </tr>
+                                    <tr style="border: none ;" >
+                                        <td class="line2">
+                                            <span class="fa-light fa-circle-check" style="font-size:50px; color:#7deb9e;padding-bottom:25px ;"></span>
+                                        </td>
+                                        <td > 
+                                            <span>invoices</span> 
+                                            <span class="fontcolor">#4732</span> and <span class="fontcolor">#4734</span> 
+                                            <div>have been paid</div>  
+                                            <span class="fontcolor2">Dec 18,18:36 
+                                            </span> 
+                                        </td>
+                                        <td>
+                                            <span class='fas fa-angle-right rightarrow' ></span>
+                                        </td>
+                                    </tr>
+                                    <tr style="border: none ;">
+                                        <td class="line2">
+                                            <span class="fa-light fa-pen-circle" style="font-size:50px; color:#3790d9;padding-bottom:25px "></span>
+
+                                        </td>
+                                        <td> 
+                                            <span>Affiliate commission for 
+                                               <div>June has been paid</div> 
+                                            </span>  
+                                            <span class="fontcolor2">36 minutes ago</span> 
+                                        </td>
+                                        <td >
+                                            <span class='fas fa-angle-right rightarrow' ></span>
+                                        </td>
+                                    </tr>
+                                    <tr style="border: none;">
+                                        <td class="line2">
+                                            <span class='fa-light fa-circle' style='font-size:48px;color:#e08065;padding-bottom:25px;'>
+                                                <span class="fa-regular fa-arrow-rotate-right" style="font-size:1.875rem;color:#e08065 ;position: relative; top: -7px;right: 51px;"></span>
+                                            </span>
+                                            
+                                        </td>
+                                        <td> 
+                                            <span>
+                                                Order 
+                                                <span class="fontcolor">#37745</span> 
+                                                from July,1st 
+                                                <div>has been refunded</div> 
+                                            </span> 
+                                            <span class="fontcolor2">4 minutes ago 
+                                            </span> 
+                                        </td>
+                                        <td>
+                                            <span class='fas fa-angle-right rightarrow'></span>
+                                        </td>
+                                    </tr>
+                                    <tr style="border: none ;">
+                                        <td class="line2">
+                                            <span class='fa-light fa-circle' style='font-size:48px;color:#049c8b;padding-bottom:25px ;'>
+                                                <span class="fa-solid fa-share" style="font-size:25px;color:#049c8b ;position: relative; top: -10px;right: 47px;" ></span>
+                                            </span>
+
+                                        </td>
+                                        <td> 
+                                            <span >Invoice 
+                                                <span class="fontcolor">#4769</span> 
+                                                has been sent 
+                                                <div>
+                                                    to
+                                                <span class="fontcolor">Robert Smith</span>
+                                                </div>
+                                            </span> 
+                                            <span class="fontcolor2" style="padding-bottom: 25px;">Dec 12,05:46</span> 
+                                        </td>
+                                        <td ><span class='fas fa-angle-right rightarrow' ></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+            </div>
+           
+
+            <footer>
+                <div>
+                    <span class="fontcolor2" style="font-weight:bold ;">
+                        <span class="fa-regular fa-copyright"></span> 2015.
+                    </span>
+                    <span class="fontcolor">Limitless Web App Kit</span>
+                    <span class="fontcolor2" style="font-weight: bold;">by</span>
+                    <span class="fontcolor">Eugene Kopyov</span>
+                </div>
+            </footer>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
